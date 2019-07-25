@@ -1,4 +1,3 @@
-<html>
 <H1> JSON教程</ H1>
 <P1> JSON是使用Javascript对象的一种，</ BR>也是制作扩展中心必不可少的一部分，本教程主要针对扩展中心的制作</ BR> </ BR> JSON的语法格式简单，要求比较不严格，本教程将会采用图文类比的方法，使得内容易于理解</ P1>
 
@@ -41,5 +40,4 @@ function myFunction（）{
 		var a2 =“正确”;
 		的document.getElementById（ “NMSL”）的innerHTML = A2。
 	}
-</ SCRIPT>
-</html>
+</SCRIPT>
