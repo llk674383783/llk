@@ -1,0 +1,84 @@
+<div id="a">
+<h1 id="a1">网页功能</h1></br><p5>this website belongs to llk</p5></br>
+<p3 id="a3"> </p3></br>
+<button onclick="function1()" id="button1"><p2 id="button">计算器</p2></button></br>
+<p1 id="a2">更多功能正在开发中……敬请期待</p2>
+</div>
+
+<div id="b">
+<input id="b1" type="text" value=><p8>在左侧输入第一个数</p8></br>
+<p4 id="fuhao">请选择运算符</p4></br>
+<button onclick="function2()">+</button>
+<button onclick="function3()">-</button>
+<button onclick="function4()">×</button>
+<button onclick="function5()">÷</button></br>
+<input id="b2" type="text" value=><p7>在左侧输入第二个数</p7></br></br>
+<button onclick="function6()">确定</button>
+</div>
+</br>
+<p6 id="b3"></p6></br>
+
+<script>
+	var c=0;
+	document.getElementById("b").style.display='none';
+	function function1(){
+		//更换元素
+		var clear="";
+		var a1="计算器";
+		var a3="目前该功能还处于开发阶段，因此只有简单的加减乘除";
+		document.getElementById("a1").innerHTML=a1;
+		document.getElementById("a2").innerHTML=clear;
+		document.getElementById("a3").innerHTML=a3;
+		document.getElementById("button").innerHTML=clear;
+		//删除元素
+		var parent = document.getElementById("a");
+        var child = document.getElementById("button1");
+        parent.removeChild(child);
+        //显示隐藏元素
+        document.getElementById("b").style.display="inline";
+	}
+	
+	function function2(){
+		c=1;
+		document.getElementById("fuhao").innerHTML="+";
+	}
+	
+	function function3(){
+	    c=2;
+		document.getElementById("fuhao").innerHTML="-";
+	}
+	
+	function function4(){
+	    c=3;
+		document.getElementById("fuhao").innerHTML="×";
+	}
+	
+	function function5(){
+	    c=4;
+		document.getElementById("fuhao").innerHTML="÷";
+	}
+	
+	function function6(){
+		var num1=document.getElementById("b1").value;
+		var num2=document.getElementById("b2").value;
+		num1=parseInt(num1);
+		num2=parseInt(num2);
+		switch(c){
+			case 1:
+			document.getElementById("b3").innerHTML=num1+num2;
+			break;
+			case 2:
+			document.getElementById("b3").innerHTML=num1-num2;
+			break;
+			case 3:
+			document.getElementById("b3").innerHTML=num1*num2;
+			break;
+			case 4:
+			document.getElementById("b3").innerHTML=num1/num2;
+			break;
+			default:
+			document.getElementById("b3").innerHTML="请选择运算符";
+			break;
+		}
+    }
+</script>
