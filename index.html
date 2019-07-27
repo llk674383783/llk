@@ -61,21 +61,22 @@
 </div>
 
 <div id="video">
-	<video src="video0.mp4" controls id="v0" width="250" height="200" autoplay="aotuplay" display="none"></video>
-	<video src="video1.mp4" controls id="v1" width="250" height="200" autoplay="aotuplay" display="none"></video>
-	<video src="video2.mp4" controls id="v2" width="250" height="200" autoplay="aotuplay" display="none"></video>
-	<video src="video3.mp4" controls id="v3" width="250" height="200" autoplay="aotuplay" display="none"></video>
-	<video src="video4.mp4" controls id="v4" width="250" height="200" autoplay="aotuplay" display="none"></video>
-	<video src="video5.mp4" controls id="v5" width="250" height="200" autoplay="aotuplay" display="none"></video>
-	<video src="video6.mp4" controls id="v6" width="250" height="200" autoplay="aotuplay" display="none"></video>
+	<video src="video0.mp4" controls id="v0" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video1.mp4" controls id="v1" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video2.mp4" controls id="v2" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video3.mp4" controls id="v3" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video4.mp4" controls id="v4" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video5.mp4" controls id="v5" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video6.mp4" controls id="v6" width="250" height="200" autoplay="aotuplay"></video>
 </div>
 
 <script>
 	var c=0;
-	    document.getElementById("b").style.display='none';
+	document.getElementById("b").style.display='none';
         document.getElementById("json").style.display="none";
         document.getElementById("back").style.display="none";
         document.getElementById("qj").style.display="none";
+        document.getElementById("video").style.display="none";
         
     function back(){
         document.getElementById("json").style.display="none";
@@ -224,30 +225,79 @@
 	
 	function video0(){
 		document.getElementById("v0").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v2").style.display="none";
+                document.getElementById("v3").style.display="none";
+                document.getElementById("v4").style.display="none";
+                document.getElementById("v5").style.display="none";
+                document.getElementById("v6").style.display="none";
 	}
 		
 	function video1(){
 		document.getElementById("v1").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v0").style.display="none";
+                document.getElementById("v2").style.display="none";
+                document.getElementById("v3").style.display="none";
+                document.getElementById("v4").style.display="none";
+                document.getElementById("v5").style.display="none";
+                document.getElementById("v6").style.display="none";
 	}
 	
 	function video2(){
 		document.getElementById("v2").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v0").style.display="none";
+                document.getElementById("v3").style.display="none";
+                document.getElementById("v4").style.display="none";
+                document.getElementById("v5").style.display="none";
+                document.getElementById("v6").style.display="none";
 	}
 	
 	function video3(){
 		document.getElementById("v3").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v2").style.display="none";
+                document.getElementById("v0").style.display="none";
+                document.getElementById("v4").style.display="none";
+                document.getElementById("v5").style.display="none";
+                document.getElementById("v6").style.display="none";
 	}
 	
 	function video4(){
 		document.getElementById("v4").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v2").style.display="none";
+                document.getElementById("v3").style.display="none";
+                document.getElementById("v0").style.display="none";
+                document.getElementById("v5").style.display="none";
+                document.getElementById("v6").style.display="none";
 	}
 	
 	function video5(){
 		document.getElementById("v5").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v2").style.display="none";
+                document.getElementById("v3").style.display="none";
+                document.getElementById("v4").style.display="none";
+                document.getElementById("v0").style.display="none";
+                document.getElementById("v6").style.display="none";
 	}
 	
 	function video6(){
 		document.getElementById("v6").style.display="inline";
+                document.getElementById("video").style.display="inline";
+                document.getElementById("v1").style.display="none";
+                document.getElementById("v2").style.display="none";
+                document.getElementById("v3").style.display="none";
+                document.getElementById("v4").style.display="none";
+                document.getElementById("v5").style.display="none";
+                document.getElementById("v0").style.display="none";
 	}
 		
 		
