@@ -60,6 +60,8 @@
 	<p7 id="re"></p7>
 </div>
 
+
+<div id="video">
 	<video src="video0.mp4" controls id="v0" width="250" height="200" autoplay="aotuplay"></video>
 	<video src="video1.mp4" controls id="v1" width="250" height="200" autoplay="aotuplay"></video>
 	<video src="video2.mp4" controls id="v2" width="250" height="200" autoplay="aotuplay"></video>
@@ -67,6 +69,7 @@
 	<video src="video4.mp4" controls id="v4" width="250" height="200" autoplay="aotuplay"></video>
 	<video src="video5.mp4" controls id="v5" width="250" height="200" autoplay="aotuplay"></video>
 	<video src="video6.mp4" controls id="v6" width="250" height="200" autoplay="aotuplay"></video>
+</div>
 
 <script>
 	var c=0;
@@ -201,72 +204,34 @@
         function video(){
         document.getElementById("a").style.display="none";
         document.getElementById("back").style.display="inline";
-        var v=getDay();
+        var x=new Date();
+        var v=x.getDay();
         switch(v){
             case 0:
-            video0();
+            document.getElementById("v0").style.display="inline";
             break;
             case 1:
-            video1();
+            document.getElementById("v1").style.display="inline";
             break;
             case 2:
-            video2();
+            document.getElementById("v2").style.display="inline";
             break;
             case 3:
-            video3();
+            document.getElementById("v3").style.display="inline";
             break;
             case 4:
-            video4();
+            document.getElementById("v4").style.display="inline";
             break;
             case 5:
-            video5();
+            document.getElementById("v5").style.display="inline";
             break;
             case 6:
-            video6();
+            document.getElementById("v6").style.display="inline";
+            break;
+            default:
+            document.getElementById("v3").style.display="inline";
             break;
         }
-	}
-	
-	function video0(){
-		document.getElementById("v0").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
-	}
-		
-	function video1(){
-		document.getElementById("v1").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
-	}
-	
-	function video2(){
-		document.getElementById("v2").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
-	}
-	
-	function video3(){
-		document.getElementById("v3").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
-	}
-	
-	function video4(){
-		document.getElementById("v4").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
-	}
-	
-	function video5(){
-		document.getElementById("v5").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
-	}
-	
-	function video6(){
-		document.getElementById("v6").style.display="inline";
-                document.getElementById("video").style.display="inline";
-                
 	}
 		
 		
