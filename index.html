@@ -54,7 +54,7 @@
 	<input id="bl" type="text" value=""><p3>变量框(必填，只支持数值)</p3></br>
 	<input id="two" type="text" value=""><p4>第二框(选填)</p4></br></br>
 	<input id="max" type="text" value=""><p5>变量最大值</p5></br>
-	<input id="jump" type="text" value=""><p6>穷举间隔</p6></br>
+	<input id="jump" type="text" value=""><p6>穷举间隔(填0网页崩溃)</p6></br>
 	<button onclick="re()">提交</button></br>
 	<p7 id="re"></p7>
 </div>
@@ -173,7 +173,7 @@
 		var a4=parseFloat(a4);
 		var a5=parseFloat(a5);
 		//while循环
-		while (a2<a4){
+		while (a2<a4+0.00001){
 			a6=a6+a1+a2+a3+"</br>";
 			a2=a2+a5;
 		}
