@@ -1,0 +1,242 @@
+<meta name="viewport" content="width=device-width,initial-scale=0.8,maximum-scale=0.8,minimum-scale=0.8,user-scalable=no">
+<button onclick="back()" id="back">返回</button>
+<div id="a">
+<h1 id="a1">网页功能</h1></br><p5>this website belongs to llk</p5></br>
+<p3 id="a3"> </p3></br>
+<button onclick="function1()" id="button1"><p2 id="button">计算器</p2></button></br></br>
+<button onclick="function7()" id="button2">json教程</button></br></br>
+<button onclick="qj()">穷举器</button></br></br>
+<button onclick="video()">每日彩蛋</button></br>
+<p1 id="a2">更多功能正在开发中……敬请期待</p2>
+</div>
+
+<div id="b">
+<h1>计算器</h1>
+<p1>目前该功能还处于开发阶段，因此只有简单的加减乘除</p1></br>
+<input id="b1" type="text" value=><p8>在左侧输入第一个数</p8></br>
+<p4 id="fuhao">请选择运算符</p4></br>
+<button onclick="function2()">+</button>
+<button onclick="function3()">-</button>
+<button onclick="function4()">×</button>
+<button onclick="function5()">÷</button></br>
+<input id="b2" type="text" value=><p7>在左侧输入第二个数</p7></br></br>
+<button onclick="function6()">确定</button>
+</br>
+<p6 id="b3"></p6></br>
+</div>
+
+<div id="json">
+<h1>JSON教程</h1>
+<p1>json是Javascript对象的一种，</br>也是制作Addons必不可少的一部分，本教程主要针对Addons的制作</br></br>json的语法格式简单，要求比较不严格，本教程将会采用图文类比的方法，使得内容易于理解</p1>
+
+<p2>json文本一般有五种格式:</br>字符串  "a":"b"</br>数值  "a": 1</br>布尔值  "a": true</br>数组  "a": [1, 2]</br></br>先来看一段例子</br>{"教程": {"内容": "json","作者": "炖菜"}}</br>这就是一段json文本。其中"教程"是父标签，"内容"和"作者"都是子标签，用图片表示的形式如下</p2>
+</br><img src="duncai.png"></br>
+<p3>所以从某种层面上来说，json可以理解为有一个最大的文件夹，包着里面的一个个小文件夹，小文件夹同样也可以放更小的文件夹在里面</br>而对于"a": 1或者"a": true这种规定了具体的值的标签，可以类比为文件，存放在文件夹中。
+但是对于一段比较长的json文本，我们通常需要换行和进退位来使其更美观，例如我们可以把以上例子换成</br>
+{</br>"教程": {</br>  "内容": "json",</br>  "作者": "炖菜"</br>}</br>}</br>值得注意的是，同一级标签之前要用英文逗号隔开，否则会使语法出错</p3>
+<h2>小节训练</h2>
+<input type="text" id="num" value="这里填写答案" />
+	<p>请补全以下例子中方框内缺失的部分</br>{"中国":{"语言":"中文"□"所在大洲": "亚洲"}}</p>
+	<p id="demo"></p>
+<button onclick="myFunction()">验证答案</button>
+</br></br>
+<p4>{"首都":{"中国首都": "北京","俄国首都":"莫斯科","英国首都":"伦敦"}}</br>在以上例子中，"首都"的子标签有几个？</p4></br>
+<button onclick="wrong()">6 </button>
+<button onclick="wrong()">1 </button>
+<button onclick="right()">3 </button>
+<button onclick="wrong()">4 </button></br>
+<p5 id="nmsl"></p5>
+</div>
+
+<div id="qj">
+	<h1>穷举器</h1>
+	<p1>用法：列举出"NXY有1个肝"到"NXY有9个肝"中的整数</br>"NXY有"(该文本放入第一框)</br> "1"(该文本放入变量框)</br>"个肝"(该文本放入第二框)</br>并设置变量最大值为9，穷举间隔为1</br></br>
+	<input id="one" type="text" value=""><p2>第一框(选填)</p2></br>
+	<input id="bl" type="text" value=""><p3>变量框(必填，只支持数值)</p3></br>
+	<input id="two" type="text" value=""><p4>第二框(选填)</p4></br></br>
+	<input id="max" type="text" value=""><p5>变量最大值</p5></br>
+	<input id="jump" type="text" value=""><p6>穷举间隔(填0网页崩溃)</p6></br>
+	<button onclick="re()">提交</button></br>
+	<p7 id="re"></p7>
+</div>
+
+	<video src="video0.mp4" controls id="v0" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video1.mp4" controls id="v1" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video2.mp4" controls id="v2" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video3.mp4" controls id="v3" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video4.mp4" controls id="v4" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video5.mp4" controls id="v5" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video6.mp4" controls id="v6" width="250" height="200" autoplay="aotuplay"></video>
+
+<script>
+	var c=0;
+	    document.getElementById("b").style.display='none';
+        document.getElementById("json").style.display="none";
+        document.getElementById("back").style.display="none";
+        document.getElementById("qj").style.display="none";
+        document.getElementById("v0").style.display="none";
+        document.getElementById("v1").style.display="none";
+        document.getElementById("v2").style.display="none";
+        document.getElementById("v3").style.display="none";
+        document.getElementById("v4").style.display="none";
+        document.getElementById("v5").style.display="none";
+        document.getElementById("v6").style.display="none";
+        
+    function back(){
+        document.getElementById("json").style.display="none";
+        document.getElementById("b").style.display="none";
+        document.getElementById("a").style.display="inline";
+        document.getElementById("button2").style.display="inline";
+        document.getElementById("qj").style.display="none";
+        document.getElementById("back").style.display="none";
+        document.getElementById("v0").style.display="none";
+        document.getElementById("v1").style.display="none";
+        document.getElementById("v2").style.display="none";
+        document.getElementById("v3").style.display="none";
+        document.getElementById("v4").style.display="none";
+        document.getElementById("v5").style.display="none";
+        document.getElementById("v6").style.display="none";
+    }
+    
+	function function1(){
+		document.getElementById("back").style.display="inline";
+		//隐藏菜单
+		document.getElementById("a").style.display="none";
+        
+        //显示隐藏元素
+        document.getElementById("b").style.display="inline";
+	}
+	
+	function function2(){
+		c=1;
+		document.getElementById("fuhao").innerHTML="+";
+	}
+	
+	function function3(){
+	    c=2;
+		document.getElementById("fuhao").innerHTML="-";
+	}
+	
+	function function4(){
+	    c=3;
+		document.getElementById("fuhao").innerHTML="×";
+	}
+	
+	function function5(){
+	    c=4;
+		document.getElementById("fuhao").innerHTML="÷";
+	}
+	
+	function function6(){
+		var num1=document.getElementById("b1").value;
+		var num2=document.getElementById("b2").value;
+		var num1=parseFloat(num1);
+		var num2=parseFloat(num2);
+		switch(c){
+			case 1:
+			document.getElementById("b3").innerHTML=num1+num2;
+			break;
+			case 2:
+			document.getElementById("b3").innerHTML=num1-num2;
+			break;
+			case 3:
+			document.getElementById("b3").innerHTML=num1*num2;
+			break;
+			case 4:
+			document.getElementById("b3").innerHTML=num1/num2;
+			break;
+			default:
+			document.getElementById("b3").innerHTML="请选择运算符";
+			break;
+		}
+    }
+    
+    function function7(){
+      document.getElementById("a").style.display="none";
+      document.getElementById("json").style.display="inline";
+      document.getElementById("button2").style.display="none";
+      document.getElementById("back").style.display="inline";
+    }
+    
+    function myFunction(){
+	var right="正确";
+	var wrong="错误，应填写英文逗号";
+	var a = document.getElementById("num").value;
+	if (a==","){
+		document.getElementById("demo").innerHTML= right;
+	}
+    else{
+        document.getElementById("demo").innerHTML=wrong;
+    }
+}
+
+    function wrong(){
+		var a1="错误";
+		document.getElementById("nmsl").innerHTML=a1;
+	}
+	function right(){
+		var a2="正确";
+		document.getElementById("nmsl").innerHTML=a2;
+	}
+	
+	function qj(){
+		document.getElementById("qj").style.display="inline";
+		document.getElementById("back").style.display="inline";
+		document.getElementById("a").style.display="none";
+	}
+	
+	function re(){
+		//变量转换
+		var a1=document.getElementById("one").value;
+		var a2=document.getElementById("bl").value;
+		var a3=document.getElementById("two").value;
+		var a4=document.getElementById("max").value;
+		var a5=document.getElementById("jump").value;
+		var a6="";
+		var a2=parseFloat(a2);
+		var a4=parseFloat(a4);
+		var a5=parseFloat(a5);
+		//while循环
+		while (a2<a4+0.00000000001){
+			a6=a6+a1+a2+a3+"</br>";
+			a2=a2+a5;
+		}
+		document.getElementById("re").innerHTML=a6;
+	}
+	
+    function video(){
+        document.getElementById("a").style.display="none";
+        document.getElementById("back").style.display="inline";
+        var x=new Date();
+        var v=x.getDay();
+        switch(v){
+            case 0:
+            document.getElementById("v0").style.display="inline";
+            break;
+            case 1:
+            document.getElementById("v1").style.display="inline";
+            break;
+            case 2:
+            document.getElementById("v2").style.display="inline";
+            break;
+            case 3:
+            document.getElementById("v3").style.display="inline";
+            break;
+            case 4:
+            document.getElementById("v4").style.display="inline";
+            break;
+            case 5:
+            document.getElementById("v5").style.display="inline";
+            break;
+            case 6:
+            document.getElementById("v6").style.display="inline";
+            break;
+            default:
+            document.getElementById("v3").style.display="inline";
+            break;
+        }
+	}
+	
+	
+	
+</script>
