@@ -5,7 +5,8 @@
 <p3 id="a3"> </p3></br>
 <button onclick="function1()" id="button1"><p2 id="button">计算器</p2></button></br></br>
 <button onclick="function7()" id="button2">json教程</button></br></br>
-<button onclick="qj()">穷举器</button></br>
+<button onclick="qj()">穷举器</button></br></br>
+<button onclick="video()">每日彩蛋</button></br>
 <p1 id="a2">更多功能正在开发中……敬请期待</p2>
 </div>
 
@@ -57,6 +58,16 @@
 	<input id="jump" type="text" value=""><p6>穷举间隔(填0网页崩溃)</p6></br>
 	<button onclick="re()">提交</button></br>
 	<p7 id="re"></p7>
+</div>
+
+<div id="video">
+	<video src="video0.mp4" controls id="v0" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video1.mp4" controls id="v1" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video2.mp4" controls id="v2" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video3.mp4" controls id="v3" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video4.mp4" controls id="v4" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video5.mp4" controls id="v5" width="250" height="200" autoplay="aotuplay"></video>
+	<video src="video6.mp4" controls id="v6" width="250" height="200" autoplay="aotuplay"></video>
 </div>
 
 <script>
@@ -179,6 +190,63 @@
 			a2=a2+a5;
 		}
 		document.getElementById("re").innerHTML=a6;
+	}
+
+        function video(){
+        document.getElementById("a").style.display="none";
+        document.getElementById("back").style.display="inline";
+        var v=getDay;
+        switch(v){
+            case 0:
+            video0();
+            break;
+            case 1:
+            video1();
+            break;
+            case 2:
+            video2();
+            break;
+            case 3:
+            video3();
+            break;
+            case 4:
+            video4();
+            break;
+            case 5:
+            video5();
+            break;
+            case 6:
+            video6();
+            break;
+        }
+	}
+	
+	function video0(){
+		document.getElementById("v0").style.display="inline";
+	}
+		
+	function video1(){
+		document.getElementById("v1").style.display="inline";
+	}
+	
+	function video2(){
+		document.getElementById("v2").style.display="inline";
+	}
+	
+	function video3(){
+		document.getElementById("v3").style.display="inline";
+	}
+	
+	function video4(){
+		document.getElementById("v4").style.display="inline";
+	}
+	
+	function video5(){
+		document.getElementById("v5").style.display="inline";
+	}
+	
+	function video6(){
+		document.getElementById("v6").style.display="inline";
 	}
 		
 		
